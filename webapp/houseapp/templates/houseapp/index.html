@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .center {
+          margin: auto;
+          width: 40%;
+          border: 3px solid #73AD21;
+          padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+
+    <body>
+        <div id="login">
+            <h3 class="text-center text-white pt-5">House form</h3>
+            <div class="container">
+                <div id="login-row" class="row justify-content-center align-items-center">
+                    <div id="login-column" class="col-md-6">
+                        <div id="login-box" class="col-md-12">
+                            <form id="loginform" class="form-horizontal" role="form" action="/" method="POST">
+                                {% csrf_token %}
+                                <h3 class="text-center text-info">House price of unit area</h3>
+
+                               
+                                <div class="form-group">
+                                    <label for="username" class="text-info">X1 transaction date :</label><br>
+                                    <input type="number" name="X1" id="X1" class="form-control" value="{{ X1 }}"placeholder="X1" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="username" class="text-info">X2 house age :</label><br>
+                                    <input type="number" name="X2" id="X2" class="form-control" value="{{ X2 }}"placeholder="X1" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="username" class="text-info">X3 distance to the nearest MRT station :</label><br>
+                                    <input type="number" name="X3" id="X3" class="form-control" value="{{ X3 }}"placeholder="X1" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="username" class="text-info">X4 number of convenience stores :</label><br>
+                                    <input type="number" name="X4" id="X4" class="form-control" value="{{ X4 }}"placeholder="X1" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="username" class="text-info">X5 latitude :</label><br>
+                                    <input type="number" name="X5" id="X5" class="form-control" value="{{ X5 }}"placeholder="X1" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="username" class="text-info">X6 longitude :</label><br>
+                                    <input type="number" name="X6" id="X6" class="form-control" value="{{ X6 }}"placeholder="X1" required>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <input type="submit" name="submit" class="btn btn-info btn-md" value="submit">
+                                    <label for="username" class="text-info"> <b>House price of unit area : {{ result }}</b></label><br>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</body>
+</html>
